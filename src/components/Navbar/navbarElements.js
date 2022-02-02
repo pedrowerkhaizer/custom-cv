@@ -4,6 +4,7 @@ import { FaBars } from 'react-icons/fa'
 
 
 export const NavContainer = styled.div`
+background-color: var(--background-color);
 `
 
 export const Nav = styled.nav`

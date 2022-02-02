@@ -11,9 +11,11 @@ const Navbar = () => {
             <Nav>
                 <div>
                     <h3 style={{ letterSpacing: 0.5, textColor: '#fafafa', fontSize: 22, marginBottom: 4, padding: 0 }}>Pedro Werkhaizer</h3>
-                    <Us style={{ fontSize: 32, marginRight: 8, opacity: 0.4 }} />
-                    <Br style={{ fontSize: 32, marginRight: 8 }} />
-                    <Es style={{ fontSize: 32, marginRight: 0, opacity: 0.4 }} />
+                    <div style={{ display: 'flex', flexDirection: 'row' }} onClick={() => alert('Unfortunately, I still dont have this site translated. But, no worries. Im working on it =)')}>
+                        <div className="flagContainer"><Br style={{ fontSize: 32 }} /></div>
+                        <div className="flagContainer" style={{ opacity: 1 }}><Us style={{ fontSize: 32 }} /></div>
+                        <div className="flagContainer"><Es style={{ fontSize: 32 }} /></div>
+                    </div>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
