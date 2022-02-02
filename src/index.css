@@ -11,13 +11,17 @@ html {
   --lightGray: #F1F1F1;
   --darkGray: #cccccc;
   --blackish: #201B28;
+  --codeBackground: #1d182c;
 
-
+  overflow: hidden;
   background: var(--backgroundColor);
   color: var(--textColor);
   font-family: 'Montserrat', sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   margin: 0;

@@ -12,9 +12,9 @@ const Navbar = () => {
                 <div>
                     <h3 style={{ letterSpacing: 0.5, textColor: '#fafafa', fontSize: 22, marginBottom: 4, padding: 0 }}>Pedro Werkhaizer</h3>
                     <div style={{ display: 'flex', flexDirection: 'row' }} onClick={() => alert('Unfortunately, I still dont have this site translated. But, no worries. Im working on it =)')}>
-                        <div className="flagContainer"><Br style={{ fontSize: 32 }} /></div>
-                        <div className="flagContainer" style={{ opacity: 1 }}><Us style={{ fontSize: 32 }} /></div>
-                        <div className="flagContainer"><Es style={{ fontSize: 32 }} /></div>
+                        <div className="flagContainer"><Br style={{ fontSize: 28 }} /></div>
+                        <div className="flagContainer" style={{ opacity: 1 }}><Us style={{ fontSize: 28 }} /></div>
+                        <div className="flagContainer"><Es style={{ fontSize: 28 }} /></div>
                     </div>
                 </div>
 
