@@ -13,10 +13,11 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem calc((100vw - 1000px)/4); 
-    z-index: 10;
+    z-index: 1;
 `
 
 export const NavLink = styled(Link)`
+    z-index: 2;
     font-weight: 600;
     display: flex;
     align-items: center;

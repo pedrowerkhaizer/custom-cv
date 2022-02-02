@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.css'
+import '../App.css'
 
 import { MarkGithubIcon } from '@primer/octicons-react';
 
@@ -28,18 +28,7 @@ class Home extends React.Component {
                     </div>
 
                     <div className="rightContentContainer">
-                        <div className="codingContainer">
-                            <div style={{ display: 'flex', flexDirecition: 'row', marginBottom: 16, width: '100%', alignItems: 'center', justifyContent: 'right' }}>
-                                <div className="minimizeCircle" />
-                                <div className="cascateCircle" />
-                                <div className="closeCircle" />
-                            </div>
-                            <code>
-                                <span style={{ color: '#CE88F0' }}>if </span>(problem) <span style={{ color: '#6DCCD8' }}>==</span> <span style={{ color: '#E9AF79' }}>true</span> {' {'} <br />
-                                <span style={{ marginLeft: 56 }}>try {' {'}</span>
-
-                            </code>
-                        </div>
+                        <iframe src='https://my.spline.design/grogucopy-d159e7871ed7cbb457ac90ca2bfedcb8/' frameborder='0' width='100%' height='100%'></iframe>
                     </div>
 
                 </div>
