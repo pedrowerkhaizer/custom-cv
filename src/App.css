@@ -1,38 +1,685 @@
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+   content: " ";
+   display: table;
+}
+
+.clearfix:after {
+   clear: both;
+}
+
+.clearfix {
+   *zoom: 1;
+}
+
+:target {
+  scroll-margin-top: 2em;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  background: var(--backgroundColor);
+  min-height: 200vh;
+}
+
+
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--darkBackgroundColor);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 56px;
+}
+.navbar-logo{
+  height: 1.2em;
+  position: absolute;
+  left: 2.5vw;
+}
+
+.navbar-container a {
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  height: 50vmin;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--textColor);
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+
+.App-h1 {
+  width: 60%;
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 130%;
+  text-align: center;
+  color: var(--textColor);
+}
+.App-h2 {
+  width: 60%;
+    margin: 1em 0 0.5em 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.9em;
+  line-height: 130%;
+  text-align: center;
+  color: var(--textColor);
+  background: -webkit-linear-gradient(
+    -70deg
+    ,#db469f,#2188ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.App-h3 {
+  width: 60%;
+  margin: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: var(--secundaryTextColor);
+}
+
+
+.App-p {
+  width: 60%;
+  margin: 0.5em 0 1em 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2em;
+  text-align: center;
+  color: var(--secundaryTextColor);
+}
+
+.App-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  color: var(--textColor);
+  background: var(--enphashisAccentColor);
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--darkBackgroundColor);
+  margin-bottom: 25vh;
+}
+
+.App-button1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  color: var(--textColor);
+  background: var(--enphashisAccentColor);
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--darkBackgroundColor);
+}
+
+@media screen and (min-height: 960px) {
+  .App-button{
+    margin-bottom: 15vh;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.App-button:hover, .App-button1:hover {
+  transition: all 0.2s ease-in-out;
+  background: var(--textColor);
+  color: var(--darkBackgroundColor);
+}
+
+.Icon-container{
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--lightBackgroundColor);
+  border-radius: 64px;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+
+.App-container{
+  max-height: 100vh;
+  padding: 64px 0 126px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.App-container2{
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Container-type1 {
+  max-height: 100vh;
+  padding: 126px 20px 126px 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Platform-container{
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  margin: 0 20;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightBackgroundColor);
+  ;
+}
+
+.Platform-container strong{
+  margin-top: 0.75em;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 100%;
+  text-align: center;
+  color: var(--darkBackgroundColor);
+}
+
+.Platform-container p{
+  font-size: 1em;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 26px;
+}
+
+.Platform-Vector{
+  height: 20vh;
+}
+.App-highlight{
+  background: var(--accentColor);
+  color: var(--textColor);
+}
+
+.Platform-p {
+  margin-left: 64;
+}
+.Vector-container {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Demo p {
+  font-size: 0.5em;
+}
+
+.App-footer {
+  background:var(--blackish);
+  padding: 12px 0 12px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div.App-footer a {
+  text-decoration: none;
+  color: var(--lightGray);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.7em;
+}
+
+.App-footer a.Footer-name {
+  font-weight: 800;
+  color: var(--darkGray);
+}
+
+.App-subtitle strong{
+  color: var(--enphashisAccentColor);
+}
+
+@media screen and (min-height: 500px) {
+  .Icon-container{
+    width: 36px;
+    height: 36px;
+    
   }
+  :target {
+    scroll-margin-top: -0.5em;
+  }
+}
+
+.App-title {
+  text-align: start;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--lightGray);
+}
+
+@media screen and (min-height: 740px) {
+  .Icon-container{
+    width: 52px;
+    height: 52px;
+  }
+  :target {
+    scroll-margin-top: 2em;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  div .App-container2 .AstronautVector {
+    margin-top: 5vh;
+  }
+  .App-title {
+    text-align: start;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--lightGray);
+    padding: 0;
+  }
+  
+  .Container-type1 {
+    padding: 16px 20px 32px 20px;
+    align-items: left;
+    flex-direction: column;
+  }
+
+  .App-button1 {
+    margin: 16px 0 32px 0;
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .App-container2{
+    max-height: 100%;
+    min-width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .App-container{
+    max-height: 100vh;
+    min-width: 40vw;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Social-text {
+    width: 50%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: var(--secundaryTextColor);
+  }
+  .Blocks-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Container-Block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+    background: var(--lightBackgroundColor);
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 16px;
+  }
+  .Social-Icon{
+    width: 56px;
+  }
+  .Demo {
+    width:256px;
+    height: auto;
+  }
+  .App {
+    align-items: left;
+  }
+  .App-container{
+    align-items: left;
+  }
+
+  .App-header{
+    align-items: left;
+  }
+  .App-h1{
+    width: 100%;
+    padding: 0 20px;
+    text-align: left;
+  }
+  .App-h2 {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    align-self: left;
+    text-align: left;
+  }
+  .App-h3 {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    align-self: left;
+  }
+  .App-p {
+    width: 90%;
+    text-align: left;
+    margin-top: 1em;
+  }
+
+  .App-description {
+    margin: 0 0 16px 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: start;
+    color: var(--secundaryTextColor);
+  }
+  .Platform-Vector {
+    width: 90%;
+  }
+  .Platform-container { 
+    margin: 0 2em;
+  }
+  .Platform-container strong {
+    margin: 0;
+  }
+
+  .App-footer a{
+    font-size: 0.6em;
+    margin: 0 0.8em;
+  }
+  .App-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ }
+
+@media screen and (min-width: 960px) {
+  div .App-container2 .AstronautVector {
+    margin-top: 0;
+  }
+  .Demo{ 
+    height: 50vh;
+    width: auto;
+  }
+  .App-footer {
+    flex-direction: row;
+  }
+  .App-container {
+    padding: 0 0 126px 0;
+  }
+  .Container-type1 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 20px 128px 20px;
+  }
+  
+  .App-h1 {
+    width: 60%;
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--textColor);
+  }
+  .App-h2 {
+    width: 45%;
+      margin: 1em 0 0.5em 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.9em;
+    line-height: 130%;
+    text-align: center;
+    color: var(--textColor);
+    background: -webkit-linear-gradient(
+      -70deg
+      ,#db469f,#2188ff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  }
+
+  .App-subtitle {
+    width: 100%;
+    padding: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8em;
+    line-height: 130%;
+    text-align: center;
+    color: var(--textColor);
+  }
+
+  .Blocks-container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .Container-Block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 196px;
+    background: var(--lightBackgroundColor);
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .Container-Block:hover {
+    transition: all 0.1s ease-in-out;
+    background: var(--backgroundColor);
+    cursor: pointer;
+  }
+
+  .Container-Block:active {
+    background: var(--darkBackgroundColor);
+    cursor: pointer;
+  }
+
+  .Social-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: var(--secundaryTextColor);
+  }
+
+
+  .Social-Icon{
+    width: 126px;
+  }
+
+  .App-description {
+    width: 80%;
+    margin-top: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color: var(--secundaryTextColor);
+  }
+  
+  
+  .App-h3 {
+    width: 45%;
+    margin: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  .App-p {
+    width: 42%;
+    margin: 0.5em 0 1em 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.Email-desc {
+  color: var(--darkGray);
+  width: 100%;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* Swall */
+
+.swal-modal {
+  background-color: var(--blackish);
+}
+
+.swal-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swal-text {
+  color: #D8D6DA;
+  font-family: Montserrat;
+  font-style: normal;
+  text-align: center;
+}
+
+.swal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swal-button {
+  background-color: var(--accentColor);
+  color: var(--lightBackgroundColor);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  border-width: 0;
+  stroke-width: 0;
+  padding: 0.8em 5em 0.8em 5em;
+  border-radius: 30px;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: rgba(63, 52, 80, 0.5);
+  background: -webkit-linear-gradient(
+      -70deg
+      ,#db469f,#2188ff);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+  color: var(--accentColor);
+  border-width: 0;
+  stroke-width: 0;
+}
+
+.swal-overlay {
+  background-color: rgba(24, 19, 32, 0.8);
 }
