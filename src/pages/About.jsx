@@ -21,6 +21,9 @@ class About extends React.Component {
                     I have always been very curious and therefore always wanted to know how things worked...
                     When I was a child, every time I saw a game I wondered how it worked. This curiosity moved me and at the age of 14, 2 years after some freelance experiences in Graphic Design, I decided to create my first mobile game using C# and JavaScript technology through the Unity Engine and ended up falling in love with this world. (Although I realized I didn't come to this world to create games lol)
                 </p>
+
+                <h6 style={{ letterSpacing: 2, margin: '1.5rem 0 1rem 0', color: '#9BA4CD' }}>ABOUT ME</h6>
+                
             </div>
         )
     }
