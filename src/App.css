@@ -5,32 +5,37 @@ html {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
 
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;  
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
 }
 
 
 .clearfix:before,
 .clearfix:after {
-   content: " ";
-   display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-   clear: both;
+  clear: both;
 }
 
 .clearfix {
-   *zoom: 1;
+  *zoom: 1;
 }
 
 :target {
   scroll-margin-top: 2em;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -41,6 +46,7 @@ html {
   margin-right: 8px;
   opacity: 0.4;
 }
+
 .flagContainer:hover {
   opacity: 0.7;
 }
@@ -51,7 +57,7 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.5rem calc((100vw - 1000px)/4); 
+  padding: 0.5rem calc((100vw - 1000px)/4);
 }
 
 .leftContentContainer {
@@ -74,7 +80,7 @@ html {
   z-index: 0;
 }
 
-div.codingContainer{
+div.codingContainer {
   padding: 1.5rem 2rem;
   width: 90%;
   height: 40vh;
@@ -107,7 +113,7 @@ div.codingContainer{
   margin-right: 8px;
 }
 
-code{
+code {
   padding: 1rem 2rem;
   line-height: 1.5;
   color: var(--darkGray);
@@ -152,7 +158,7 @@ div.imgBtn {
   opacity: 1;
   cursor: pointer;
   z-index: 2;
-} 
+}
 
 div.imgBtn:hover {
   transition: all 0.2s ease-in-out;
@@ -174,11 +180,11 @@ div.imgBtn a {
   color: var(--darkBackgroundColor);
 }
 
-div.imgBtn a:hover{
+div.imgBtn a:hover {
   color: var(--darkBackgroundColor);
 }
 
-div.imgBtn a:active{
+div.imgBtn a:active {
   color: var(--darkBackgroundColor);
 }
 
@@ -195,4 +201,22 @@ div.imgBtn a:active{
 
 .buttonContainer a:active {
   color: var(--secundaryTextColor);
+}
+
+.skillContainer {
+  margin-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem 10%;
+  flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .skillContainer {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
