@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { MeteorRainLoading } from 'react-loadingg';
+import { LoadingContainer } from './loadingElement';
 
 const Container = () => {
     const [show, toggleShow] = React.useState(false);
@@ -7,14 +8,14 @@ const Container = () => {
     useEffect(() => {
         setTimeout(() => {
             toggleShow(!show);
-        }, 5000);
+        }, 4000);
     }, [])
 
     return (
-        <div hidden={show} style={{ backgroundColor: "#1A142E", width: "100vw", height: "100vh", position: "fixed", top: "0", left: "0", zIndex: "9999" }}>
-            <MeteorRainLoading color="#953AED" /> </div>
+        <LoadingContainer hidden={show}>
+            <MeteorRainLoading color="#953AED" />
+        </LoadingContainer>
     )
 };
-
 
 export default Container;
