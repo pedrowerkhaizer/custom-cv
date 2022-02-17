@@ -2,11 +2,13 @@ import React from 'react';
 import '../App.css'
 
 import { MarkGithubIcon } from '@primer/octicons-react';
+import Loading from '../components/Loading'
 
 class Home extends React.Component {
     render() {
         return (
             <div>
+                <Loading />
                 <div className="contentContainer">
                     <div className="leftContentContainer">
                         <h1>Be creative in <br />
@@ -28,7 +30,8 @@ class Home extends React.Component {
                     </div>
 
                     <div className="rightContentContainer">
-                        <iframe src='https://my.spline.design/grogucopy-d159e7871ed7cbb457ac90ca2bfedcb8/' frameborder='0' width='100%' height='100%'></iframe>
+                        <iframe title="Grogu" src='https://my.spline.design/grogucopy-d159e7871ed7cbb457ac90ca2bfedcb8/' frameborder='0' width='100%' height='100%' />
+
                     </div>
 
                 </div>
