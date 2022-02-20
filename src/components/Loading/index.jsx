@@ -8,7 +8,7 @@ const Container = () => {
     useEffect(() => {
         setTimeout(() => {
             toggleShow(!show);
-        }, 4000);
+        }, 5000);
     }, [])
 
     return (
