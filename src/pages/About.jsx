@@ -69,9 +69,37 @@ class About extends React.Component {
                 </div>
 
                 <div className="historicalContainer">
-                    <h6 style={{ letterSpacing: 2, margin: '1.5rem 0 0.5rem 0', color: '#9BA4CD', paddingBottom: '4rem' }}>ACADEMIC HISTORIC</h6>
+                    <h6 style={{ letterSpacing: 2, margin: '1.5rem 0 0.5rem 0', color: '#9BA4CD' }}>ACADEMIC HISTORY</h6>
+                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <h3 style={{ marginRight: 18 }}>2023</h3>
+                        <p>Bachelor in Business Administration | Duale Hoschule</p>
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <h3 style={{ marginRight: 18 }}>2024</h3>
+                        <p>System Analysis and Development</p>
+                    </div>
                 </div>
 
+                <div className="historicalContainer">
+                    <h6 style={{ letterSpacing: 2, margin: '1.5rem 0 0.5rem 0', color: '#9BA4CD' }}>PROFESSIONAL HISTORY</h6>
+
+                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <h3 style={{ marginRight: 18 }}>2020</h3>
+                        <p>Logistics Intern at Volkswagen Trucks and Buses</p>
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                        <h3 style={{ marginRight: 18 }}>2021</h3>
+                        <p>Product Planning Administrative Technician at Volkswagen Trucks and Buses</p>
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', paddingBottom: 36 }}>
+                        <h3 style={{ marginRight: 18 }}>2022</h3>
+                        <p>Human Resources Administrative Technician at Volkswagen Trucks and Buses</p>
+                    </div>
+
+                </div>
             </div>
         )
     }
